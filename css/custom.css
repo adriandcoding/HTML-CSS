@@ -1,0 +1,206 @@
+* {
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #ffffff;
+  --secondcolor: #212429;
+}
+
+/* TIPOGRAFIA*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fuentes/static/Montserrat-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fuentes/static/Montserrat-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: bold;
+}
+
+/* ESTILOS DEL HEADER */
+
+.header nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid var(--secondcolor);
+  background-color: var(--background-color);
+  padding: 32px;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.icons-header {
+  gap: 100px;
+  display: flex;
+  list-style: none;
+}
+.texto-header {
+  gap: 100px;
+  display: flex;
+  list-style: none;
+}
+
+.header a {
+  display: flex;
+  font-family: "Montserrat";
+  color: var(--secondcolor);
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.header a:hover {
+  color: rgb(248, 210, 174);
+}
+
+.header img:hover {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+
+/* ESTILOS DEL MAIN */
+
+.title {
+  font-family: "Montserrat";
+  color: var(--secondcolor);
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
+  padding: 32px;
+}
+
+section img {
+  width: 100%;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+section img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.description {
+  align-items: center;
+  display: flex;
+  color: var(--secondcolor);
+  margin: 16px;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.card-1 {
+  order: 5;
+}
+
+.card-2 {
+  order: 6;
+}
+
+.card-3 {
+  order: 1;
+}
+
+.card-4 {
+  order: 3;
+}
+
+.card-5 {
+  order: 4;
+}
+
+.card-6 {
+  order: 2;
+}
+
+/*ESTILOS DEL FOOTER*/
+
+.contenedor-footer {
+  background-color: var(--secondcolor);
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--background-color);
+}
+.elementos-footer {
+  align-items: center;
+  display: flex;
+  padding: 32px;
+  gap: 16px;
+}
+.logo-footer {
+  display: flex;
+
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@media (width<=920px) {
+  /*HEADER Y MAIN*/
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .texto-header {
+    display: none;
+  }
+  .hamburguesa {
+    margin: 0 auto;
+  }
+
+  .icons-header {
+    display: none;
+  }
+
+  /*FOOTER*/
+
+  .contenedor-footer {
+    color: var(--background-color);
+    background-color: var(--secondcolor);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--background-color);
+  }
+  .logo-footer {
+    justify-content: left;
+  }
+  .elementos-footer {
+    border-bottom: 1px solid var(--background-color);
+  }
+}
